@@ -11,6 +11,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Saira Condensed', sans-serif;
+    line-height: 100%;
 }
 
 body{
@@ -40,6 +41,7 @@ nav{
     position: relative;
     text-align: center;
     font-size: 4rem;
+    line-height: 150%;
 }
 
 .logo h1::before{
@@ -71,6 +73,7 @@ nav{
 
 .top h2{
     color: white;
+    line-height: 150%;
     
     font-size: 3rem;
 }
@@ -118,7 +121,7 @@ main{
 }
 
 .sort_section img{
-    max-width: 60px;
+    max-width: 3.75rem;
 }
 
 .sort_section select{
@@ -154,13 +157,10 @@ main{
     text-align: left;
 }
 
-#user_tab img:first-child{
-    max-width: 100px;
+#user_tab img{
+    max-width: 6.25rem;
 }
 
-#user_tab img:last-child{
-    max-width: 50px;
-}
 
 #user_tab_name{
     color: white;
@@ -255,4 +255,78 @@ main{
 
 .type_bar .bar_left{
     width: 100%;
+}
+
+@media only screen and (max-width:1150px){
+    html{
+        font-size: 12px;
+    }
+
+
+}
+
+@media only screen and (max-width:980px){
+    #user_tab{
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+
+    #user_tab_name,#user_tab_desc{
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width:900px){
+    html{
+        font-size: 8px;
+    }
+
+    #user_tab_name{
+        letter-spacing: 2px;
+    }
+
+    .avatar img{
+        max-width: 75px;
+    }
+
+    .right_main{
+        display: none;
+    }
+
+    .top{
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .center_main{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .sort_section{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .top{
+        width: 30%;
+        display: none;
+    }
+
+    nav{
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width:530px){
+    .user_bar .bar_right{
+        display: none;
+    }
+
+    .avatar img{
+        max-width: 50px;
+    }
 }
